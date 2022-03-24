@@ -1,0 +1,18 @@
+<div>
+    <property-header 
+        [selectedProperty]="selectedProperty" 
+        [properties]="properties"
+        [isStreetView]="isStreetView"
+        (onSelectProperty)="onSelectProperty($event)"
+        (onToggleView)="onToggleView($event)"
+        (onBookmark)="onBookmark($event)"
+    >
+    </property-header>
+    <div>
+        <div class="bg">
+            <img *ngIf="isStreetView" src="../../../assets/images/Background.png" alt="">
+            <img *ngIf="!isStreetView" src="../../../assets/images/view2.png" alt="">
+        </div>
+        <pin-detail [selectedProperty]="selectedProperty"></pin-detail>
+    </div>
+</div>

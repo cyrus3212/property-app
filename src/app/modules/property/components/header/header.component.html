@@ -1,0 +1,84 @@
+<header class="header">
+    <div class="upper-nav">
+        <ul>
+            <li>
+                <img src="../../../../assets/images/icons/list.svg" alt="">
+                
+            </li>
+            <li>
+                <span class="property-detail">
+                    <span>Own</span>
+                    <h2>{{ selectedProperty.streetName }}</h2>
+                    <span>New Orleans</span>
+                </span>
+            </li>
+            <li>
+                <img (click)="toggleView()" src="../../../../assets/images/icons/pin.svg" alt="">
+            </li>
+            <li>
+                <span class="property-detail">
+                    <span>To</span>
+                    <h2>Start</h2>
+                    <span>Place Deposit</span>
+                </span>
+            </li>
+            <li>
+                <img (click)="bookmark(selectedProperty)" [class.bookmarked]="selectedProperty.isFavorite" class="bookmark-icon" src="../../../../assets/images/icons/bookmark.svg" alt="">
+                
+            </li>
+            <li>
+                <span class="property-detail">
+                    <span>Market Value: {{ selectedProperty.marketValue }}</span>
+                    <h2>{{ selectedProperty.reservedPrice }}</h2>
+                    <span>Reserve Price</span>
+                </span>
+            </li>
+            <li>
+                <img src="../../../../assets/images/icons/house.svg" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="lower-nav">
+        <div class="left-info">
+            <div class="info-block">
+                <div>Outbid</div>
+                <div class="text--red">12</div>
+            </div>
+            <div class="info-block">
+                <div>Active</div>
+                <div>24</div>
+            </div>
+            <div class="info-block">
+                <div>Winning</div>
+                <div class="text--green">12</div>
+            </div>
+        </div>
+        <div class="properties">
+                <div class="inner">
+                    <span *ngFor="let property of properties">
+                        <span class="property" (click)="onSelectProperTy(property)">
+                            
+                            <div class="info-block">
+                                <div><b>{{ property.streetName }}</b></div>
+                                <div>{{ property.reservedPrice }}</div>
+                            </div>
+                        </span>
+                    </span>
+                </div>
+        </div>
+        <div class="right-info">
+            <div class="info-block">
+                <div>Outbid</div>
+                <div class="text--green">$100,000</div>
+            </div>
+            <div class="info-block">
+                <div>Active</div>
+                <div>$100,000</div>
+            </div>
+            <div class="info-block">
+                <div>Winning</div>
+                <div class="text--red">$100,000</div>
+            </div>
+        </div>
+    </div>
+</header>

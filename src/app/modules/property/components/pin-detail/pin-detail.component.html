@@ -1,0 +1,11 @@
+<div *ngIf="selectedProperty && selectedProperty.id" class="pin-details" >
+    <div class="title">Public Auction</div>
+    <div class="info">
+        <div>Market Value: {{ selectedProperty.marketValue }}</div>
+        <div class="location">
+            <div>{{ selectedProperty.streetName }}</div>
+            <div>{{ selectedProperty.location }}</div>
+        </div>
+        <div class="reserve-price">Reserved Bid {{ selectedProperty.reservedPrice }}</div>
+    </div>
+</div>

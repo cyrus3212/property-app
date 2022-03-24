@@ -1,0 +1,114 @@
+.bookmark-icon {
+    filter: grayscale(100%);
+
+    &.bookmarked {
+        filter: grayscale(0);
+    }
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    
+    .upper-nav {
+        background: rgba(255,255,255, .8);
+    }
+
+    .lower-nav {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        background: rgba(255,255,255, .5);
+
+        .left-info, .right-info {
+            flex-basis: 20%;
+            background: rgba(255,255,255);
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 20px;
+            align-items: center;
+            line-height: 16px;
+
+
+            .info-block {
+                display: inline-block;
+                text-align: left;
+            }
+        }
+
+        .properties {
+            flex-basis: 60%;
+            max-width: 60%;
+            overflow-x: hidden;
+
+            .inner {
+                white-space: nowrap;
+                will-change: transform;
+                animation: marquee 32s linear infinite;
+            }
+
+            .property {
+                width: 33%;
+                display: inline-block;
+
+                &:hover {
+                    cursor: pointer;
+                    background: rgba(255,255,255,.8)
+                }
+
+                .info-block {
+                    display: inline-block;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            .property-detail {
+                line-height: 24px;
+
+                h2 {
+                    margin: 0
+                }
+
+                span {
+                    color: #484848;
+                    display: block;
+                }
+            }
+
+            display: inline-flex;
+            align-items: center;
+
+            img:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.text {
+    &--red {
+        color: #E91C1C;
+    }
+
+    &--green {
+        color: #00EB3E;
+    }
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
