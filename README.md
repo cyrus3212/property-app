@@ -5,7 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Clone Project
 
 Clone this project locally through 
+
 SSH: git@github.com:cyrus3212/property-app.git
+
 HTTPS: https://github.com/cyrus3212/property-app.git
 
 ## Install Package
